@@ -12,6 +12,8 @@ size_t bin_height(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
+	if (tree->right == NULL && tree->left == NULL)
+		return (1);
 	aux1 = bin_height(tree->left);
 	aux2 = bin_height(tree->right);
 	if (aux1 > aux2)
